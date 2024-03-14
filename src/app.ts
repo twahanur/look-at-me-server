@@ -11,13 +11,14 @@ import router from './app/routes';
 const app: Application = express();
 
 //server site
-app.use(express.json());
 app.use(
   cors({
-    origin: '*',
+    origin:
+      'https://65f2d3f8ad34feb2a9b485bf--classy-paprenjak-c3bbfb.netlify.app',
     credentials: true,
   }),
 );
+app.use(express.json());
 
 // application routes
 app.use('/api', router);
