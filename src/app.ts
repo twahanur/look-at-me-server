@@ -14,7 +14,7 @@ const app: Application = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: 'https://look-at-me-client.vercel.app',
+    origin: '*',
     credentials: true,
   }),
 );
