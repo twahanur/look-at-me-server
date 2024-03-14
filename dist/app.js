@@ -24,7 +24,10 @@ const routes_1 = __importDefault(require("./app/routes"));
 const app = (0, express_1.default)();
 //server site
 app.use(express_1.default.json());
-app.use((0, cors_1.default)({ origin: 'http://localhost:5173', credentials: true }));
+app.use((0, cors_1.default)({
+    origin: 'https://vercel.com/twahanurs-projects/look-at-me-client',
+    credentials: true,
+}));
 // application routes
 app.use('/api', routes_1.default);
 const test = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
