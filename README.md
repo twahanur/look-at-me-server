@@ -1,6 +1,6 @@
 # Basic-server-site-handling
 <p align="center">
-  <h3 align="center"><a href="https://github.com/Porgramming-Hero-web-course/l2b2a4-course-review-with-auth-twahanur">Assignment 04</a></h3>
+  <h3 align="center"><a href="https://github.com/twahanur/look-at-me-server">Look At me server site</a></a></h3>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -17,7 +17,10 @@
 Please follow the below instructions to run this project in your machine locally:
 
 1. Clone this repository
-2. Run npm install
+2. run install command for install packages
+   ```sh
+   npm install
+   ```
 3. Then rename the .env.example file to ".env" and change values as per your need
 4. Finally run the application in development using below command -
    ```sh
@@ -32,11 +35,7 @@ Please follow the below instructions to run this project in your machine locally
 <!-- Live Link  -->
 
 ## LiveLink
-<h3 align="center"><a href="https://assignment4-rosy.vercel.app/">Live link on Vercel</a></h3>
+<h3 align="center"><a href="https://look-at-me-server.vercel.app">Live link on Vercel</a></h3>
 
 ## ApiDocumentation
 <h3 align="center"><a href="https://documenter.getpostman.com/view/31236287/2s9YkuaJWt">Api Documentation</a></h3>
-
-# l2b2a4-course-review-with-auth-twahanur
-# l2b2-full-stack-a5-client-side-twahanur
-# look-at-me-server
