@@ -61,7 +61,6 @@ const getAllProductsFromDB = (payload) => __awaiter(void 0, void 0, void 0, func
     }
 });
 const updateProductInDB = (id, payload) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log('updare function', payload);
     const validProduct = yield product_model_1.default.findById(id);
     if (validProduct) {
         const result = yield product_model_1.default.findByIdAndUpdate(id, payload, {
