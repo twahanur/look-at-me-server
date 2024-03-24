@@ -1,8 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { startOfWeek, startOfMonth, startOfYear, startOfDay, add } from 'date-fns';
+import {
+  startOfWeek,
+  startOfMonth,
+  startOfYear,
+  startOfDay,
+  add,
+} from 'date-fns';
 import { TSale } from './sales.interface';
 import { Sale } from './sales.model';
-
 
 const createSaleIntoDB = async (
   payload: TSale,
@@ -19,7 +24,7 @@ const getAllSalesFromDB = async (): Promise<TSale[]> => {
 };
 
 const getSalesHistory = async (period: string): Promise<TSale[]> => {
-   try {
+  try {
     let startDate;
     let endDate;
 

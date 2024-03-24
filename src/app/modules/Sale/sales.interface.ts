@@ -6,4 +6,5 @@ export type TSale = {
   quantity_sold: number;
   soldBy?: string;
   sale_date: Date;
+  quantity?: number;
 };

@@ -24,7 +24,8 @@ const routes_1 = __importDefault(require("./app/routes"));
 const app = (0, express_1.default)();
 //server site
 app.use((0, cors_1.default)({
-    origin: 'https://65f2d3f8ad34feb2a9b485bf--classy-paprenjak-c3bbfb.netlify.app',
+    origin: 'http://localhost:5173',
+    // 'https://65f2d3f8ad34feb2a9b485bf--classy-paprenjak-c3bbfb.netlify.app',
     credentials: true,
 }));
 app.use(express_1.default.json());

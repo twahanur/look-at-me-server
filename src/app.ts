@@ -13,8 +13,8 @@ const app: Application = express();
 //server site
 app.use(
   cors({
-    origin:
-      'https://65f2d3f8ad34feb2a9b485bf--classy-paprenjak-c3bbfb.netlify.app',
+    origin: 'http://localhost:5173',
+    // 'https://65f2d3f8ad34feb2a9b485bf--classy-paprenjak-c3bbfb.netlify.app',
     credentials: true,
   }),
 );

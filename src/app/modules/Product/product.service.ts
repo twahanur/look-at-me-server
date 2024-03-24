@@ -1,11 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import httpStatus from 'http-status';
 import AppError from '../../errors/AppError';
-import {
-  TProduct,
-  TProductFilterPayload,
-  TProductQuery,
-} from './product.interface';
+import { TProduct, TProductFilterPayload } from './product.interface';
 import Product from './product.model';
 
 const addProductToDB = async (payload: TProduct) => {
@@ -60,7 +56,6 @@ const getAllProductsFromDB = async (payload: TProductFilterPayload) => {
 
 const updateProductInDB = async (id: string, payload: Partial<TProduct>) => {
   const validProduct = await Product.findById(id);
-
   if (validProduct) {
     const result = await Product.findByIdAndUpdate(id, payload, {
       new: true,
