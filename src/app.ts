@@ -15,7 +15,7 @@ app.use(
   cors({
     origin:
       // 'http://localhost:5173',
-      'https://65ffea1cd6876bb32c022add--sweet-cajeta-99b5a4.netlify.app',
+      // 'https://65ffea1cd6876bb32c022add--sweet-cajeta-99b5a4.netlify.app',
     'https://look-at-me-server.vercel.app',
     credentials: true,
   }),
