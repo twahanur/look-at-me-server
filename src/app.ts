@@ -11,12 +11,13 @@ import router from './app/routes';
 const app: Application = express();
 
 //server site
-app.use(
+app.use(  
   cors({
     origin:
       // 'http://localhost:5173',
-      // 'https://65ffea1cd6876bb32c022add--sweet-cajeta-99b5a4.netlify.app',
-    ['https://look-at-me-client.vercel.app'],
+    'https://look-at-me-client.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+
     credentials: true,
   }),
 );
