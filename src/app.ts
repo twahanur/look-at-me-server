@@ -11,16 +11,26 @@ import router from './app/routes';
 const app: Application = express();
 
 //server site
-app.use(  
+// server.ts or index.ts
+app.use(
   cors({
-    origin:
-      // 'http://localhost:5173',
-    'https://look-at-me-client.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    origin: (origin, callback) => {
+      const allowedOrigins = [
+        "http://localhost:5173",
+        "https://look-at-me-client.vercel.app"
+      ];
 
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
-  }),
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"]
+  })
 );
+
 app.use(express.json());
 
 // application routes
