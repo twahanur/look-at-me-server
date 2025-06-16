@@ -17,9 +17,8 @@ app.use(
     origin: (origin, callback) => {
       const allowedOrigins = [
         "http://localhost:5173",
-        "https://look-at-me-client.vercel.app"
+        "https://look-at-me-beta.vercel.app"
       ];
-
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {

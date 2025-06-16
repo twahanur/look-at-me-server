@@ -23,11 +23,22 @@ const notFound_1 = __importDefault(require("./app/middlewares/notFound"));
 const routes_1 = __importDefault(require("./app/routes"));
 const app = (0, express_1.default)();
 //server site
+// server.ts or index.ts
 app.use((0, cors_1.default)({
-    origin: 
-    // 'http://localhost:5173',
-    'https://65ffea1cd6876bb32c022add--sweet-cajeta-99b5a4.netlify.app',
+    origin: (origin, callback) => {
+        const allowedOrigins = [
+            "http://localhost:5173",
+            "https://look-at-me-beta.vercel.app"
+        ];
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        }
+        else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"]
 }));
 app.use(express_1.default.json());
 // application routes
